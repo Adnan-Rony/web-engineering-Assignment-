@@ -1,0 +1,42 @@
+ body {
+      font-family: Arial;
+      background-color: #ffff;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #5e3c00;
+      margin-bottom: 30px;
+    }
+
+    table {
+      width: 70%;
+      margin: 0 auto;
+      border-collapse: collapse;
+      background-color: #fff;
+      
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 16px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2e1c1;
+      color: #5e3c00;
+    }
+
+    img {
+      width: 100px;
+      border-radius: 8px;
+    }
+
+ 
+    td.ingredients {
+      color: #555;
+      font-style: italic;
+    }
