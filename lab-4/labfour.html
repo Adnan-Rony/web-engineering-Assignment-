@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fruit Fiesta Market</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <h1>Fruit Fiesta Market</h1>
+    <a href="https://github.com/adnan-rony/">My Basket</a>
+
+    <div class="items-dropdown">
+      <h3>Fruits</h3>
+      <ul class="dropdown-menu1">
+        <li><a href="#">Fresh Apples</a></li>
+        <li><a href="#">Bananas</a></li>
+        <li><a href="#">Oranges</a></li>
+      </ul>
+    </div>
+
+    <div class="offer-dropdown">
+      <h3>Special Offers</h3>
+      <ul class="dropdown-menu2">
+        <li><a href="#">Mango Madness</a></li>
+        <li><a href="#">Berry Bonanza</a></li>
+        <li><a href="#">Citrus Saver</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <input type="text" placeholder="Search for fruits..." />
+      <button id="searchButton">Find</button>
+    </div>
+
+    <div>
+      <i class="fa-solid fa-cart-shopping" id="cartIcon">
+        <sub id="cartCount">0</sub>
+      </i>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="backgroundImage">
+    <button class="oferButton">
+      <h3>Shop Now</h3>
+    </button>
+  </section>
+
+  <!-- Card Section -->
+  <div class="card-container"></div>
+
+  <!-- Cart Sidebar -->
+  <div id="cartSidebar" class="cart-sidebar">
+    <h2>Your Cart</h2>
+    <div id="cartItems"></div>
+    <button onclick="closeCart()">Close</button>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p class="footerText">Fruit Fiesta</p>
+  </footer>
+
+  <script src="labbfour.js"></script>
+</body>
+</html>
