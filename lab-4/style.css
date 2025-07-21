@@ -1,222 +1,303 @@
-*{
-    margin: 0px;
-}
-nav{
-    background-color: rgb(49, 44, 44);
-    height: 30px;
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    padding: 10px;
-    margin: 0;
+/* Universal Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-h1,h3{
-    color: azure;
-}
-a{
-    color: white;
-}
-#searchButton{
-    color: rgb(19, 18, 18);
-    background-color: yellow;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 20px;
-}
-input{
-     padding: 5px 10px; border: none;
-    border-radius: 20px;
-}
-#cartIcon{
-    color: white;
-}
-sub{
-    color: white;
+/* Navbar */
+nav {
+  background-color: #2c2c2c;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
 }
 
+h1, h3 {
+  color: #f0f8ff;
+}
 
+a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
 
+/* Search Button */
+#searchButton {
+  color: #1a1a1a;
+  background-color: #ffd700;
+  padding: 5px 12px;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+#searchButton:hover {
+  background-color: #f1c40f;
+}
 
+input {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+}
+
+#cartIcon {
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  position: relative;
+}
+#cartIcon sub {
+  color: white;
+  background-color: red;
+  border-radius: 50%;
+  padding: 1px 6px;
+  font-size: 12px;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+}
+
+/* Card Container */
 .card-container {
-   
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-     justify-content: center;
-     justify-items: center;
-    padding: 20px;
-   gap: 40px 40px; 
-    width: 80%;
-    margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  justify-items: center;
+  gap: 30px;
+  padding: 30px;
+  width: 90%;
+  margin: 0 auto;
 }
 
-  .card {
-   padding: 20px;
-   width: 300px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 8px; 
-    background-color: white; 
-    transition: transform 0.3s ease;
+.card {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 280px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .card:hover {
-    transform: scale(1.03);
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
+.card img {
+  border-radius: 10px;
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
 
-  .card img {
-    border-radius: 10px;
-    width: 100%;
-    height: 160px;
-    object-fit: cover;
-  }
+.card-body {
+  padding-top: 12px;
+}
 
-  .card-body {
-    padding: 15px;
-  }
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #121212;
+}
 
-  .card-title {
-    font-size: 18px;
-    margin: 0 0 10px;
-    font-weight: bold;
-  }
+.card-category {
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 10px;
+}
 
-  .card-category {
-    font-size: 14px;
-    color: #777;
-    margin-bottom: 10px;
-  }
+.card-price {
+  font-size: 16px;
+  color: #e91e63;
+  font-weight: bold;
+}
 
-  .card-price {
-    font-size: 16px;
-    color: #e91e63;
-    font-weight: bold;
-  }
+/* Add-to-Cart Button in Cards */
+.card .oferButton {
+  position: static;
+  margin-top: 12px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: #28a745;
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+.card .oferButton:hover {
+  background-color: #218838;
+}
 
+/* Background Hero */
+.backgroundImage {
+  height: 50vh;
+  background-image: url('https://images.pexels.com/photos/18405161/pexels-photo-18405161.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
 
+/* Shop Now Button */
+.backgroundImage .oferButton {
+  background-color: #ff5722;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px 24px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 25px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+.backgroundImage .oferButton:hover {
+  background-color: #e64a19;
+}
+
+/* Footer */
 .footer {
-    background-color: black;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
+  background-color: #111;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
-
 .footerText {
-    color: white;
-    text-align: center;
+  color: white;
+  font-size: 14px;
 }
 
-/* dropdown */
+/* Dropdowns */
 .items-dropdown,
 .offer-dropdown {
-    position: relative;
-    cursor: pointer;
-    margin: 0 10px;
+  position: relative;
+  margin: 0 10px;
+  cursor: pointer;
 }
 
 .dropdown-menu1,
 .dropdown-menu2 {
-    width: 140px;
-    display: none;
-    position: absolute;
-    background-color: white;
-    list-style-type: none;
-    padding: 8px 0;
-    margin: 0;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 4px;
-    z-index: 1000;
+  width: 140px;
+  display: none;
+  position: absolute;
+  background-color: white;
+  padding: 8px 0;
+  margin: 0;
+  list-style: none;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  z-index: 1000;
 }
-
-
 
 .items-dropdown:hover .dropdown-menu1,
 .offer-dropdown:hover .dropdown-menu2 {
-    display: block;
+  display: block;
 }
 
 .dropdown-menu1 li a,
 .dropdown-menu2 li a {
-    color: black;
-    text-decoration: none;
-    display: block;
-    padding: 8px 15px;
-    transition: background-color 0.3s ease;
+  color: black;
+  text-decoration: none;
+  display: block;
+  padding: 8px 15px;
+  transition: background-color 0.3s ease;
 }
 
 .dropdown-menu1 li a:hover,
 .dropdown-menu2 li a:hover {
-    background-color: #f0f0f0;
+  background-color: #f4f4f4;
 }
 
-/* imagge */
-.backgroundImage {
-    height:50vh;
-    background-image: url('https://images.pexels.com/photos/2775827/pexels-photo-2775827.jpeg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
- 
-
-}
-
-.oferButton {
-    background-color: green;
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    padding: 10px 20px;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 4px;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-}
-
-.oferButton:hover {
-    background-color: darkgreen;
-}
-
-/* Add to Cart */
+/* Cart Sidebar */
 .cart-sidebar {
   position: fixed;
   top: 0;
   right: -100%;
-  width: 300px;
+  width: 320px;
   height: 100%;
-  background: #fff;
-  box-shadow: -2px 0 5px rgba(0,0,0,0.2);
+  background-color: #121212;
+  color: #fff;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.5);
   padding: 20px;
   overflow-y: auto;
   transition: right 0.3s ease;
-  z-index: 1000;
+  z-index: 9999;
 }
-
 .cart-sidebar.show {
   right: 0;
 }
 
-.cart-sidebar img {
-  width: 80px;
-  height: 80px;
-  object-fit: cover;
-  margin-right: 10px;
+.cart-sidebar h2 {
+  margin-bottom: 15px;
+  color: #f8f8f8;
 }
 
 .cart-item {
   display: flex;
   align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 10px;
 }
-.remove-btn{
-    background-color: red;
-    color: white;
-    border: none;
-    padding: 5px;
+.cart-item img {
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+.cart-item div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.remove-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.remove-btn:hover {
+  background-color: #c82333;
+}
+
+.cart-sidebar h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #f0f0f0;
+  margin-top: 10px;
+  border-top: 1px solid #444;
+  padding-top: 10px;
+}
+
+#cartSidebar button {
+  margin-top: 20px;
+  width: 100%;
+  background-color: #444;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+#cartSidebar button:hover {
+  background-color: #222;
 }
